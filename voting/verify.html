@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Vote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Verify Your Vote</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="verify.html">Verify</a>
+            <a href="results.html">Results</a>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main>
+            <button onclick="promptPasswordForVerification()">Verify My Vote</button>
+            
+            <!-- Share Verification Section -->
+            <div id="shareInputContainer" style="display: none; margin-top: 20px;">
+                <h3>Enter Your Shares or Nonce</h3>
+                
+                <!-- Shares Input -->
+                <div id="sharesSection">
+                    <label for="share1">Share 1 (x, y):</label>
+                    <input type="text" id="share1" placeholder="e.g., 1,52">
+                    <label for="share2">Share 2 (x, y):</label>
+                    <input type="text" id="share2" placeholder="e.g., 2,76">
+                    <label for="share3">Share 3 (x, y):</label>
+                    <input type="text" id="share3" placeholder="e.g., 3,45">
+                </div>
+
+                <!-- Nonce Input -->
+                <div style="margin-top: 20px;">
+                    <label for="nonce">Or enter your nonce:</label>
+                    <input type="text" id="nonce" placeholder="e.g., 60868270bop">
+                </div>
+
+                <button onclick="submitVerification()">Submit Verification</button>
+            </div>
+            
+            <div id="verifyOutput" style="margin-top: 20px;"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
